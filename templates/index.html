@@ -3,20 +3,20 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>PresMaker - AI presentation maker</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <title>PresMaker - Home</title>
+        <link rel="stylesheet" href="/static/style.css">
+        <script src="/static/script.js"></script>
     </head>
     <body>
-        <form method="post" action="/create">
-            <input name="topic" type="text" placeholder="Write your topic here..."></input>
-            <input name="additional-info" type="text" placeholder="Write additional info here..."></input>
-            <input name="mood" type="text" placeholder="Mood..."></input>
-
-            <button type="submit">Create!🎨</button>
+        <form id="app" method="POST" action="/create/">
+            <label for="topic">The topic of your presentation:</label>
+            <input id="topic" type="text" placeholder="Can you fart underwater?" name="topic"></input>
+            <label for="additional-info">Any additional info:</label>
+            <textarea id="additional-info" placeholder="Consider the water pressure as you go deeper" name="additional-info"></textarea>
+            <label for="mood">Language:</label>
+            <input id="mood" type="text" placeholder="English" name="mood"></input>
+            <button type="submit">Create! 🎨</button>
         </form>
-
-        <script src="script.js"></script>
     </body>
 </html>
 

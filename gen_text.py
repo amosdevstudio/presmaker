@@ -8,7 +8,7 @@ client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 system_prompt = open("system_prompt.txt", "r").read()
 
 
-def gen_text(arguments):
+def gen_text(arguments: str) -> str:
     # The arguments are provided in JSON form
     chat_completion = client.chat.completions.create(
         messages=[
@@ -21,14 +21,18 @@ def gen_text(arguments):
                 "content": arguments,
             }
         ],
-        model="llama3-8b-8192",
-        temperature=0.5,
-        max_tokens=1024,
+        model="mixtral-8x7b-32768",
+        temperature=1,
+        max_tokens=8192,
         top_p=1,
         stop=None,
         stream=False,
+        response_format={"type": "json_object"},
     )
-    return chat_completion.choices[0].message.content
+
+    result = chat_completion.choices[0].message.content
+    if result is None: return ""
+    else: return result
 
 
 if __name__ == "__main__":
