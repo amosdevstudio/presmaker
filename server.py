@@ -9,7 +9,7 @@ argument_template = """
 {
     "topic": "<topic>"
     "additional-info": "<additional-info>"
-    "language": "<mood>"
+    "language": "<language>"
 }
 """
 
@@ -30,7 +30,7 @@ def create():
     arguments = argument_template \
         .replace("<topic>", data["topic"]) \
         .replace("<additional-info>", data["additional-info"]) \
-        .replace("<mood>", data["mood"])
+        .replace("<language>", data["language"])
     name = ''.join(random.choices(string.ascii_uppercase + string.digits, k=20))
     path = './presentations/' + name + '.pptx'
     gen_pptx(arguments, path)
