@@ -1,6 +1,18 @@
 # PresMaker
 An AI powerpoint presentation maker.
 
+> [!WARNING]
+> This project has no real error handling and is not suited for a production environment (yet).
+> Also, the presentations look very ugly and generic.
+> That's why I recommend that you give away your data, your life and your dignity to daddy Microsoft and
+> use the automatic "designer" interface on https://www.microsoft.com/microsoft-365/powerpoint just to make the
+> powerpoint look like it wasn't stolen from your grandpa's Windows XP.
+
+> [!NOTE]
+> I like to use my own software to make notes or simple presentations for school.
+> People usually expect plagiarised work to look beautiful and beyond your own ability,
+> so this tool gives you fantastic opsec at that.
+
 ## Setup
 Get a free API key at [groq.com](https://groq.com/).
 Make a .env file:
