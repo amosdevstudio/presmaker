@@ -21,8 +21,8 @@ GROQ_API_KEY=whisperwhisperwhisper...
 ```
 Next, make a virtual environment:
 ```
-python3 -m venv env
-source env/bin/activate
+python3 -m venv venv
+source venv/bin/activate
 ```
 Install the requirements:
 ```

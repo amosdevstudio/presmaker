@@ -22,7 +22,7 @@ def gen_text(arguments: str) -> str:
             }
         ],
         model="mixtral-8x7b-32768",
-        temperature=1,
+        temperature=0.5,
         max_tokens=8192,
         top_p=1,
         stop=None,
