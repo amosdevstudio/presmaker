@@ -28,7 +28,10 @@ Install the requirements:
 ```
 pip3 install -r requirements.txt
 ```
-
+Make the "presentations" directory:
+```
+mkdir presentations
+```
 Run the server!
 ```
 python3 server.py
